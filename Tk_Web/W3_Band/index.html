@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,82 @@
     <link rel="stylesheet" href="./assets/icon/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="icon" href="./assets/img/logo.png">
 </head>
+
 <body>
     <div id="main">
         <div id="header">
-          <ul id="nav">
-            <li><a href="">Home</a></li>
-            <li><a href="">Band</a></li>
-            <li><a href="">Tour</a></li>
-            <li><a href="">Contact</a></li>
-            <li>
-                <a href="">More
-                    <i class="fa-solid fa-caret-down"></i>
-                </a>
-                <ul class="subnav">
-                    <li><a href="">Merchandise</a></li>
-                    <li><a href="">Extras</a></li>
-                    <li><a href="">Media</a></li>
-                </ul>
-            </li>
-          </ul>
-          
+            <ul id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="#BAND">Band</a></li>
+                <li><a href="#TOUR">Tour</a></li>
+                <li><a href="">Contact</a></li>
+                <li>
+                    <a href="">More
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="">Merchandise</a></li>
+                        <li><a href="">Extras</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="button__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
         </div>
 
         <div id="slider">
-
+            <div class="text--content">
+                <h2 class="heading">Chicago</h2>
+                <p class="content--text">Thank you, Chicago - A night we won't forget.</p>
+            </div>
         </div>
 
         <div id="content">
+            <!-- The Band -->
+            <div id="BAND" class="content__section">
+                <h2  class="content--heading">THE BAND</h2>
+                <p class="content--subhea">We love music</p>
+                <p class="content--about">We have created a fictional band website. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <div class="content__member">
+                    <div class="member">
+                        <p class="member--name">Name</p>
+                        <img src="./assets/img/member.jpeg" alt="Name" class="member--ava">
+                    </div>
+                    <div class="member">
+                        <p class="member--name">Name</p>
+                        <img src="./assets/img/member.jpeg" alt="Name" class="member--ava">
+                    </div>
+                    <div class="member">
+                        <p class="member--name">Name</p>
+                        <img src="./assets/img/member.jpeg" alt="Name" class="member--ava">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- The Tour -->
+            <div id="TOUR" class="content__tour">
+                <div class="content__section ">
+                    <h2 id="BAND" class="content--heading text--while">TOUR DATES</h2>
+                    <p class="content--subhea text--while">Remember to book your tickets!</p>
+                    
+                    <ul class="tickets__list">
+                        <li>September <span class="sold--out">Sold out</span> </li>
+                        <li>October <span class="sold--out">Sold out</span></li>
+                        <li>November <span class="number">3</span></li>
+                    </ul>
+                </div>
+
+            </div>
 
         </div>
 
@@ -43,4 +93,5 @@
         </div>
     </div>
 </body>
+
 </html>
