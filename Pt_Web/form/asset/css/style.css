@@ -1,0 +1,45 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    border: 1px solid;
+    margin: 10px 30%;
+    box-shadow: 0 0 10px black;
+}
+.main__title>p{
+    font-style: italic;
+}
+.main__title {
+    background-color: azure;
+    color: #1FC785;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+
+}
+
+.main__form  {
+    border: 1px solid;
+    padding: 30px ;
+    margin: 5px;
+}
+
+.main--info {
+    list-style: none;
+}
+.main--info li{
+    padding: 5px;
+}
+#Solid{
+    color: red;
+    font-style: italic;
+}
+table,th,td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}

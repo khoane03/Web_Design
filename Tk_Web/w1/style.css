@@ -1,0 +1,22 @@
+* {
+    margin: 0; 
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    background-color: #191A2E;
+}
+
+table,
+th,
+td {
+    color: yellowgreen;
+    font-weight: 300;
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+}
+
+table {
+    width: 100%;
+}
+th{
+    color: brown;
+}

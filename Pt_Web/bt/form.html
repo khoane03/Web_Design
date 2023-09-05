@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding-top: 10px;
+            /* margin: 0; */
+            /* background-color: bisque; */
+            /* color: red; */
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">THÔNG TIN CÁ NHÂN</h1>
+    <div style="position: relative;">
+        <li>
+            <label for="EMAIL"><span style="color: red;">*</span> Email:</label>
+            <br>
+            <input type="text" name="" id="EMAIL">
+        </li>
+        <li>
+            <label for="Born">Ngày sinh</label>
+            <br>
+            <input type="text" name="" id="Born">
+
+        </li>
+
+        <li>
+            <label for="">Giới tính</label>
+            <br>
+            <input type="radio" name="imale" id="nam">
+            <label for="nam">Nam</label>
+            <input type="radio" name="imale" id="nữ">
+            <label for="nữ">Nữ</label>
+        </li>
+    </div>
+    <div style="position: absolute;top: 130px; right: 16%;">
+        <li>
+
+            <label for="PHONE"><span style="color: red;">*</span> Điện thoại:</label>
+            <br>
+            <input type="text" name="" id="PHONE" required="text">
+        </li>
+        <li>
+            <label for="">Quốc tịch</label>
+            <br>
+            <select name="Quốc tịch" style="width: 150px;">
+                <option value="VIỆT NAM">Việt Nam</option>
+                <option value="NHẬT">Nhật</option>
+                <option value="HÀN">Hàn</option>
+
+            </select>
+
+        </li>
+        <li>
+            <label for="">Tình trạng hôn nhân</label>
+            <br>
+            <input type="radio" name="HN" id="HN">
+            <label for="HN">Độc thân</label>
+            <input type="radio" name="HN" id="HN">
+            <label for="nữ">Đã kết hôn</label>
+
+        </li>
+    </div>
+    <div>
+        <label for="Qg">Quốc gia</label>
+        <br>
+        <select name="Qg" style="width: 600px;">
+            <option value="VIỆT NAM1">Việt Nam</option>
+            <option value="NHẬT">Nhật</option>
+            <option value="HÀN">Hàn</option>
+
+        </select>
+    </div>
+    <div>
+        <li>
+            <label for="Qg">Tỉnh/thành phố</label>
+            <br>
+            <select name="Qg" style="width: 150px;">
+                <option value="HN">HÀ NỘI</option>
+                <option value="NHẬT">TP HCM</option>
+                <option value="HÀN">ĐÀ NẴNG</option>
+            </select>
+        </li>
+        <li style="position: absolute; right: 20%; top: 370px;">
+            <label for="Qg">Quận/ Huyện</label>
+            <br>
+            <select name="Qg" style="width: 150px;">
+                <option value="HN">Từ liêm</option>
+                <option value="NHẬT">Đống Đa</option>
+                <option value="HÀN">Ba Đình</option>
+            </select>
+        </li>
+    </div>
+    <div>
+        <label for="Qg">Địa chỉ</label>
+        <br>
+        <input type="text" name="" id="" style="width: 600px;">
+    </div>
+    <label for=""><span style="color: red;">*</span> Vui lòng nhập thông tin</label>
+
+</body>
+</html>
