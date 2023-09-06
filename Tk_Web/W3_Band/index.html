@@ -14,10 +14,10 @@
     <div id="main">
         <div id="header">
             <ul id="nav">
-                <li><a href="">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#BAND">Band</a></li>
                 <li><a href="#TOUR">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#CONTACT">Contact</a></li>
                 <li>
                     <a href="">More
                         <i class="fa-solid fa-caret-down"></i>
@@ -44,7 +44,7 @@
         <div id="content">
             <!-- The Band -->
             <div id="BAND" class="content__section">
-                <h2  class="content--heading">THE BAND</h2>
+                <h2 class="content--heading">THE BAND</h2>
                 <p class="content--subhea">We love music</p>
                 <p class="content--about">We have created a fictional band website. Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -76,20 +76,112 @@
                 <div class="content__section ">
                     <h2 id="BAND" class="content--heading text--while">TOUR DATES</h2>
                     <p class="content--subhea text--while">Remember to book your tickets!</p>
-                    
+
                     <ul class="tickets__list">
                         <li>September <span class="sold--out">Sold out</span> </li>
                         <li>October <span class="sold--out">Sold out</span></li>
                         <li>November <span class="number">3</span></li>
                     </ul>
+
+                    <div class="tickets__option">
+
+                        <div class="tickets--card">
+                            <img src="./assets/img/newyork.jpg" alt="newyork" class="card--img">
+                            <div class="tickets--box">
+                                <h3 class="tickets--heading">New York</h3>
+                                <p class="tickets--subhea">Fri 27 Nov 2016</p>
+                                <p class="tickets--content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <span class="tickets--btn">Buy tickets</span>
+                            </div>
+                        </div>
+
+                        <div class="tickets--card">
+                            <img src="./assets/img/paris.jpg" alt="paris" class="card--img">
+                            <div class="tickets--box">
+                                <h3 class="tickets--heading">Paris</h3>
+                                <p class="tickets--subhea">Sat 28 Nov 2016</p>
+                                <p class="tickets--content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                </p>
+                                <span class="tickets--btn">Buy tickets</span>
+
+                            </div>
+                        </div>
+
+                        <div class="tickets--card">
+                            <img src="./assets/img/sanfran.jpg" alt="sanfran" class="card--img">
+                            <div class="tickets--box">
+                                <h3 class="tickets--heading">San Francisco</h3>
+                                <p class="tickets--subhea">Sun 29 Nov 2016</p>
+                                <p class="tickets--content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                </p>
+                                <span class="tickets--btn">Buy tickets</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
 
+            </div>
+            <!-- Contact -->
+            <div id="CONTACT" class="content__contact">
+                <div id="BAND" class="content__section">
+                    <h2 class="content--heading">CONTACT</h2>
+                    <p class="content--subhea">Fan? Drop a note!</p>
+                    <div class="content__info">
+                        <div>
+                            <ul class="info--list">
+                                <li><i class="fa-solid fa-location-dot"></i> Chicago, US</li>
+                                <li><i class="fa-solid fa-phone"></i> Phone: +00 151515</li>
+                                <li><i class="fa-solid fa-envelope"></i> Email: mail@mail.com</li>
+                            </ul>
+                        </div>
+                        <div class="info--input">
+                            <div class="input--row">
+                                <input type="text" class="input--style" placeholder="Name">
+                                <input type="email" class="input--style" placeholder="Email">
+                            </div>
+                            <input type="tel" class="input--style" placeholder="Message">
+                            <Button class="input--send" >SEND</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Map -->
+            <div class="content__map">
+                <img src="./assets/img/map.jpg" alt="" class="map--img">
             </div>
 
         </div>
 
         <div id="footer">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-snapchat"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <p>DESIGN BY KHOA</p>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="model__continer">
+            <div class="modal--close">
+                <i class="fa-solid fa-x"></i>
 
+            </div>
+            <div class="modal--header">
+                <i class="fa-solid fa-bag-shopping">Tickets</i>
+            </div>
+            <div class="modal--body">
+                <label for=""><i class="fa-solid fa-cart-shopping"></i> Tickets, $15 per person</label>
+                <input type="text" name="" id="">
+                <label for=""><i class="fa-solid fa-user"></i> Send To</label>
+                <input type="text" name="" id="">
+                <button>Pay<i class="fa-solid fa-check"></i></button>
+            </div>
+            <div class="modal--footer">
+                <p>Need <a href="">help?</a></p>
+            </div>
         </div>
     </div>
 </body>

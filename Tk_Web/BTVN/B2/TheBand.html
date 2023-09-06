@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Band</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .text--while {
+            color: #fff;
+        }
+
+        /* Begin header */
+        #header {
+            height: 46px;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        #nav {
+            display: inline-block;
+        }
+
+        #nav>li {
+            display: inline-block;
+        }
+
+        #nav li {
+            position: relative;
+
+        }
+
+        #nav .subnav {
+            list-style: none;
+        }
+
+        #nav>li>a {
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        #nav li a {
+            text-decoration: none;
+            line-height: 46px;
+            padding: 0 24px;
+            display: block;
+        }
+
+        #nav>li:hover>a,
+        #nav .subnav li:hover a {
+            color: #000;
+            background-color: #ccc;
+        }
+
+        #nav .subnav {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        #nav li:hover .subnav {
+            display: block;
+        }
+
+        #nav .subnav a {
+            color: #000;
+            padding: 0 12px;
+            line-height: 38px;
+        }
+
+        #header .button__search {
+            display: inline-block;
+            float: right;
+            padding: 0 20px;
+        }
+
+        #header .fa-magnifying-glass {
+            color: #fff;
+            line-height: 46px;
+        }
+
+        #header .button__search:hover {
+            cursor: pointer;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="#BAND">Band</a></li>
+                <li><a href="#TOUR">Tour</a></li>
+                <li><a href="">Contact</a></li>
+                <li>
+                    <a href="">More
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="">Merchandise</a></li>
+                        <li><a href="">Extras</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="button__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
