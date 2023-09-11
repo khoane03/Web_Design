@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
     <link rel="stylesheet" href="./assets/Css/style.css">
+    <link rel="stylesheet" href="./assets/Css/responsive.css">
     <link rel="stylesheet" href="./assets/icon/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="icon" href="./assets/img/logo.png">
 </head>
@@ -29,6 +30,10 @@
                     </ul>
                 </li>
             </ul>
+            <!-- Mobile -->
+            <div id="menu--mobile" class="header--menu">
+                <i class="menu--icon fa-solid fa-bars"></i>
+            </div>
             <div class="button__search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -163,7 +168,7 @@
             <p>DESIGN BY KHOA</p>
         </div>
     </div>
-    <div class="modal">
+    <!-- <div class="modal">
         <div class="model__continer">
             <div class="modal--close">
                 <i class="fa-solid fa-x"></i>
@@ -186,6 +191,29 @@
             </div>
         </div>
     </div>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('menu--mobile')
+        var headerHight = header.clientHeight; // hight 46px
+        // Đóng mở menu mobile
+        mobileMenu.onclick = function (){
+        var isClose = header.clientHeight === headerHight;
+        if(isClose){
+            header.style.height = 'auto';
+        } else{
+            header.style.height = null;
+        }
+       }
+       //
+       var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+       console.log(menuItems);
+       for(var i = 0 ; i<menuItems.length;i++){
+         var menuItem = menuItems[i];
+        menuItem.onclick = function(){
+            header.style.height = null;
+        }
+       }
+    </script> -->
 </body>
 
 </html>
