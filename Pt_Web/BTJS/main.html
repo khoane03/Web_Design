@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    
+    <title>Form Example</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Nhập chuỗi 1">
+    <input type="text" id="input2" placeholder="Nhập chuỗi 2">
+    <input type="text" id="output" placeholder="Kết quả" disabled>
+    <br>
+    <button onclick="concatStrings()">Nút 1</button>
+    <button onclick="countCharacters()">Nút 2</button>
+    <button onclick="compareStrings()">Nút 3</button>
+
+    <script>
+        function concatStrings() {
+            const input1 = document.getElementById('input1').value;
+            const input2 = document.getElementById('input2').value;
+            const output = input1 + input2;
+            document.getElementById('output').value = output;
+        }
+
+        function countCharacters() {
+            const result = document.getElementById('output').value.length;
+            document.getElementById('output').value = result;
+        }
+
+        function compareStrings() {
+            const input1 = document.getElementById('input1').value;
+            const input2 = document.getElementById('input2').value;
+
+            if (input1.includes(input2)) {
+                const confirmDelete = confirm("Có muốn xóa các ký tự giống nhau ở chuỗi thứ nhất không?");
+                if (confirmDelete) {
+                    const newInput1 = input1.replace(input2, '');
+                    document.getElementById('input1').value = newInput1;
+                }
+            } else {
+                alert("Không có ký tự nào trong chuỗi thứ nhất giống với chuỗi thứ hai.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        margin-left: 20px;
+        background-color: bisque;
+    }
+    .btn{
+        margin-top: 30px;
+    }
+    #calculatorForm{
+        margin-top: 30px;
+        width: 500px;
+        
+      
+    }
+  </style>
+</head>
+<body>
+    <form id="calculatorForm">
+        <input type="number" id="txt1" name="txt1">
+        <button type="button" id="addBtn">+</button>
+        <button type="button" id="subtractBtn">-</button>
+        <button type="button" id="multiplyBtn">*</button>
+        <button type="button" id="divideBtn">/</button>
+        <input type="number" id="txt2" name="txt2">
+    </form>
+  <div class="btn">
+    <label for="result">Kết quả:</label>
+    <span id="result">0</span>
+
+  </div>
+
+    <script>
+        document.getElementById('addBtn').addEventListener('click', function() {
+            calculate('add');
+        });
+
+        document.getElementById('subtractBtn').addEventListener('click', function() {
+            calculate('subtract');
+        });
+
+        document.getElementById('multiplyBtn').addEventListener('click', function() {
+            calculate('multiply');
+        });
+
+        document.getElementById('divideBtn').addEventListener('click', function() {
+            calculate('divide');
+        });
+
+        function calculate(operation) {
+            var num1 = parseFloat(document.getElementById('txt1').value);
+            var num2 = parseFloat(document.getElementById('txt2').value);
+            var resultElement = document.getElementById('result');
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert('Vui lòng nhập số hợp lệ trong các ô text.');
+                return;
+            }
+
+            var result;
+
+            switch (operation) {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    if (num2 === 0) {
+                        alert('Không thể chia cho 0.');
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+                default:
+                    alert('Phép toán không hợp lệ.');
+                    return;
+            }
+
+            resultElement.textContent = result;
+        }
+    </script>
+</body>
+</html>

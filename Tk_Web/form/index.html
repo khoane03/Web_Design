@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main_form {
+            margin: 30px auto 0;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 250px;
+            height: 250px;
+        }
+
+        .main_form input {
+            /* position: relative; */
+            width: 100%;
+            padding: 10px 6px;
+            margin-bottom: 10px;
+        }
+
+        .main_form .form--lable {
+            /* position: absolute; */
+            z-index: 1;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form action="" method="post" class="main_form">
+            <label class="form--lable">User Name</label>
+            <input name="Uname" type="text" placeholder="Enter User Name">
+            <label class="form--lable">Password</label>
+            <input name="Pass" type="password" placeholder="Enter Pass">
+          
+           
+            <input class="form--btn" type="submit" value="submit">
+        </form>
+    </div>
+</body>
+
+</html>
