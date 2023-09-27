@@ -144,11 +144,11 @@
                         </div>
                         <div class="info--input">
                             <div class="input--row">
-                                <input type="text" class="input--style" placeholder="Name">
-                                <input type="email" class="input--style" placeholder="Email">
+                                <input type="text" class="input--style js--input--style" placeholder="Name">
+                                <input type="email" class="input--style js--input--style" placeholder="Email">
                             </div>
-                            <input type="tel" class="input--style" placeholder="Message">
-                            <Button class="input--send">SEND</Button>
+                            <input type="tel" class="input--style js--input--style" placeholder="Message">
+                            <Button class="input--send " id="js--input--send">SEND</Button>
                         </div>
                     </div>
                 </div>
@@ -179,11 +179,12 @@
                 <p>Tickets</p>
             </header>
             <div class="modal--body">
-                <label for="" class="modal--lable"><i class="modal--icon fa-solid fa-cart-shopping"></i>Tickets, $15 per person
+                <label for="" class="modal--lable"><i class="modal--icon fa-solid fa-cart-shopping"></i>Tickets, $15 per
+                    person
                 </label>
-                <input type="text" id=""  class="modal--input" placeholder="How many?">
+                <input type="text" id="" class="modal--input" placeholder="How many?">
                 <label for="" class="modal--lable"><i class="modal--icon fa-solid fa-user"></i> Send To</label>
-                <input type="text" name=""  class="modal--input" placeholder="Enter email" >
+                <input type="text" name="" class="modal--input" placeholder="Enter email">
                 <button class="btn">Pay<i class="modal--iconcheck fa-solid fa-check"></i></button>
             </div>
             <div class="modal-btn-footer">
@@ -196,30 +197,53 @@
         var mobileMenu = document.getElementById('menu--mobile')
         var headerHight = header.clientHeight; // hight 46px
         // Đóng mở menu mobile
-        mobileMenu.onclick = function (){
-        var isClose = header.clientHeight === headerHight;
-        if(isClose){
-            header.style.height = 'auto';
-        } else{
-            header.style.height = null;
+        mobileMenu.onclick = function () {
+            var isClose = header.clientHeight === headerHight;
+            if (isClose) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
         }
-       }
-       //
-       const open_btn = document.querySelectorAll('.js-tickets--btn');
-       const modal = document.querySelector('.modal');
-       const hideBtn = document.querySelector('.modal--close');
-       function showBuy(){
-           modal.classList.add('open');
+        //click button buy ticket
+        const open_btn = document.querySelectorAll('.js-tickets--btn');
+        const modal = document.querySelector('.modal');
+        const hideBtn = document.querySelector('.modal--close');
+        function showBuy() {
+            modal.classList.add('open');
         }
-        hideBtn.onclick =function hideBuy(){
+        hideBtn.onclick = function hideBuy() {
             modal.classList.remove('open');
         }
-        for(const btn of open_btn){
-            btn.addEventListener('click',showBuy);
-            
-       }
+        for (const btn of open_btn) {
+            btn.addEventListener('click', showBuy);
 
+        }
+        //phải điền thông tin
+        function isFormValid() {
+            var nameInput = document.querySelector('input[type="text"]');
+            var emailInput = document.querySelector('input[type="email"]');
+            var messageInput = document.querySelector('input[type="tel"]');
 
+            // Kiểm tra xem bất kỳ ô input nào có giá trị trống không
+            if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+               alert('Vui lòng điền đầy đủ thông tin vào các ô input.');
+                return false; // Form không hợp lệ
+            }
+
+            // Nếu tất cả các ô input đều được điền đầy đủ, form hợp lệ
+            return true;
+        }
+
+        // Gắn sự kiện khi người dùng nhấn nút SEND
+        var sendButton = document.getElementById('js--input--send');
+        sendButton.addEventListener('click', function (event) {
+            if (!isFormValid()) {
+                event.preventDefault(); // Ngăn chặn việc submit form nếu nó không hợp lệ
+            }
+        })
+        
+        
     </script>
 </body>
 
