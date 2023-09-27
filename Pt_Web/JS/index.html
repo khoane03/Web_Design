@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tạo Ma Trận</title>
+</head>
+<body>
+    <h1>Tạo Ma Trận</h1>
+    <label for="SoPhanTu">Nhập giá trị n:</label>
+    <input type="number" id="SoPhanTu">
+    <button id="btn">Tạo Ma Trận</button>
+    <br><br>
+    <div id="matrixContainer"></div>
+
+    <script>
+        var btn = document.getElementById('btn').addEventListener('click',
+            createMatrix()
+ );
+        function createMatrix() {
+            
+            var n = parseInt(document.getElementById("SoPhanTu").value);
+            var matrixContainer = document.getElementById("matrixContainer");
+            matrixContainer.innerHTML = ""; // Xóa nội dung trước đó (nếu có).
+
+            if (!isNaN(n) && n > 0) {
+                var matrix = document.createElement("table");
+
+                for (let i = 0; i < n; i++) {
+                    var row = document.createElement("tr");
+                    for (let j = 0; j < n; j++) {
+                        var cell = document.createElement("td");
+                        var value = i * n + j;
+                        cell.textContent = value;
+                        row.appendChild(cell);
+                    }
+                    matrix.appendChild(row);
+                }
+
+                matrixContainer.appendChild(matrix);
+            } else {
+                matrixContainer.textContent = "Vui lòng nhập một giá trị n hợp lệ.";
+            }
+        }
+    </script>
+</body>
+</html>

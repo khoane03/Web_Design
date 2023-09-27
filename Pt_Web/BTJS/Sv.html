@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Điểm Học Tập</title>
+</head>
+<body>
+    <h1>Điểm Học Tập của 3 Sinh Viên</h1>
+    
+    <script>
+        // Hàm để tính điểm môn học
+        function tinhDiem(A, B, C) {
+            return Math.round(0.6 * A + 0.3 * B + 0.1 * C);
+        }
+
+        // Hàm để kiểm tra xem sinh viên đỗ hay trượt
+        function kiemTraDiem(diem) {
+            if (diem >= 5) {
+                return "Đỗ";
+            } else {
+                return "Trượt";
+            }
+        }
+
+        // Lấy điểm A, B, C ngẫu nhiên cho 3 sinh viên
+        var diemSinhVien1 = {
+            A: Math.floor(Math.random() * 11),
+            B: Math.floor(Math.random() * 11),
+            C: Math.floor(Math.random() * 11)
+        };
+
+        var diemSinhVien2 = {
+            A: Math.floor(Math.random() * 11),
+            B: Math.floor(Math.random() * 11),
+            C: Math.floor(Math.random() * 11)
+        };
+
+        var diemSinhVien3 = {
+            A: Math.floor(Math.random() * 11),
+            B: Math.floor(Math.random() * 11),
+            C: Math.floor(Math.random() * 11)
+        };
+
+        // Tính điểm và kiểm tra đỗ/trượt cho 3 sinh viên
+        var diemMonHocSinhVien1 = tinhDiem(diemSinhVien1.A, diemSinhVien1.B, diemSinhVien1.C);
+        var ketQuaSinhVien1 = kiemTraDiem(diemMonHocSinhVien1);
+
+        var diemMonHocSinhVien2 = tinhDiem(diemSinhVien2.A, diemSinhVien2.B, diemSinhVien2.C);
+        var ketQuaSinhVien2 = kiemTraDiem(diemMonHocSinhVien2);
+
+        var diemMonHocSinhVien3 = tinhDiem(diemSinhVien3.A, diemSinhVien3.B, diemSinhVien3.C);
+        var ketQuaSinhVien3 = kiemTraDiem(diemMonHocSinhVien3);
+
+        // Hiển thị kết quả
+        document.write("<p>Sinh viên 1: Điểm môn học = " + diemMonHocSinhVien1 + ", Kết quả: " + ketQuaSinhVien1 + "</p>");
+        document.write("<p>Sinh viên 2: Điểm môn học = " + diemMonHocSinhVien2 + ", Kết quả: " + ketQuaSinhVien2 + "</p>");
+        document.write("<p>Sinh viên 3: Điểm môn học = " + diemMonHocSinhVien3 + ", Kết quả: " + ketQuaSinhVien3 + "</p>");
+    </script>
+</body>
+</html>

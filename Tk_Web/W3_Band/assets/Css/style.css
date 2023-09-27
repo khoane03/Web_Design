@@ -7,7 +7,7 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+S
 .text--while {
     color: #fff;
 }
@@ -133,11 +133,13 @@ html {
     margin: 0 auto;
     padding: 74px 16px 0;
     text-align: center;
+    
 }
 
 #content .content--heading {
     margin-bottom: 25px;
     font-weight: 300;
+    letter-spacing: 4px;
 }
 
 #content .content--subhea {
@@ -320,9 +322,6 @@ html {
 }
 /* end */
 /* Modal */
-.modal--open{
-   display: block;
-}
 .modal{
     position: fixed;
     inset: 0;
@@ -330,6 +329,9 @@ html {
     display: none;
     align-items: center;
     justify-content: center;
+}
+.open{
+   display: flex;
 }
 .model__continer{
     width: 900px;

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS</title>
-  <style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        margin-left: 20px;
-        background-color: bisque;
-    }
-    .btn{
-        margin-top: 30px;
-    }
-    #calculatorForm{
-        margin-top: 30px;
-        width: 500px;
-        
-      
-    }
-  </style>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            margin-left: 20px;
+            background-color: bisque;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+
+        #calculatorForm {
+            margin-top: 30px;
+            width: 500px;
+
+
+        }
+    </style>
 </head>
+
 <body>
     <form id="calculatorForm">
         <input type="number" id="txt1" name="txt1">
@@ -32,65 +36,98 @@
         <button type="button" id="divideBtn">/</button>
         <input type="number" id="txt2" name="txt2">
     </form>
-  <div class="btn">
-    <label for="result">Kết quả:</label>
-    <span id="result">0</span>
+    <div class="btn">
+        <label for="result">Kết quả:</label>
+        <span id="result">0</span>
 
-  </div>
+    </div>
 
     <script>
-        document.getElementById('addBtn').addEventListener('click', function() {
-            calculate('add');
+        document.getElementById('addBtn').addEventListener('click', function () {
+            cong('add');
         });
 
-        document.getElementById('subtractBtn').addEventListener('click', function() {
-            calculate('subtract');
-        });
+        function cong() {
+            var so1 = parseFloat(document.getElementById('txt1').value);
+            var so2 = parseFloat(document.getElementById('txt2').value);
+            var tinh = document.getElementById('result');
 
-        document.getElementById('multiplyBtn').addEventListener('click', function() {
-            calculate('multiply');
-        });
-
-        document.getElementById('divideBtn').addEventListener('click', function() {
-            calculate('divide');
-        });
-
-        function calculate(operation) {
-            var num1 = parseFloat(document.getElementById('txt1').value);
-            var num2 = parseFloat(document.getElementById('txt2').value);
-            var resultElement = document.getElementById('result');
-
-            if (isNaN(num1) || isNaN(num2)) {
+            if (isNaN(so1) || isNaN(so2)) {
                 alert('Vui lòng nhập số hợp lệ trong các ô text.');
                 return;
             }
 
-            var result;
-
-            switch (operation) {
-                case 'add':
-                    result = num1 + num2;
-                    break;
-                case 'subtract':
-                    result = num1 - num2;
-                    break;
-                case 'multiply':
-                    result = num1 * num2;
-                    break;
-                case 'divide':
-                    if (num2 === 0) {
-                        alert('Không thể chia cho 0.');
-                        return;
-                    }
-                    result = num1 / num2;
-                    break;
-                default:
-                    alert('Phép toán không hợp lệ.');
-                    return;
-            }
-
-            resultElement.textContent = result;
+            var ketQua = so1 + so2;
+            tinh.textContent = ketQua;
         }
+
+
+        document.getElementById('subtractBtn').addEventListener('click', function () {
+            May_tinh('subtract');
+        })
+
+        document.getElementById('multiplyBtn').addEventListener('click', function () {
+            May_tinh('multiply');
+        });
+
+        document.getElementById('divideBtn').addEventListener('click', function () {
+            May_tinh('divide');
+        });
+
+        // function calculate(operation) {
+        // var num1 = document.getElementById('txt1').value;
+        // var num2 = document.getElementById('txt2').value;
+        // var test = document.getElementById('result');
+
+        // if (isNaN(num1) || isNaN(num2)) {
+        //     alert('Vui lòng nhập số hợp lệ trong các ô text.');
+        //     return;
+        // }
+
+        // var ten;
+
+        // switch (operation) {
+        //     case 'add':
+        //         ten = num1 + num2;
+        //         break;
+        //     case 'subtract':
+        //         ten = num1 - num2;
+        //         alert('Kết quả trừ là: ' + ten);
+        //         break;
+        //     case 'multiply':
+        //         ten = num1 * num2;
+        //         break;
+        //     case 'divide':
+        //         if (num2 === 0) {
+        //             alert('Không thể chia cho 0.');
+        //             return;
+        //         }
+        //         ten = num1 / num2;
+        //         break;
+        //     default:
+        //         alert('Phép toán không hợp lệ.');
+        //         return;
+        // }
+
+        // test.textContent = ten;
+        // }
+        // function May_tinh(PhepTinh) {
+
+        //     var so1 = document.getElementById('txt1').value;
+        //     var so2 = document.getElementById('txt2').value;
+        //     var tinh = document.getElementById('result');
+
+        //     var ten;
+        //     switch (PhepTinh) {
+        //         case 'subtract':
+        //             ten = num1 - num2;
+        //             alert('Kết quả trừ là: ' + ten);
+        //             break;
+        //     }
+        //   tinh.textContent = ten;
+
+        // }
     </script>
 </body>
+
 </html>
