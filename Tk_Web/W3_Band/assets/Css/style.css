@@ -7,9 +7,10 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-S
+
 .text--while {
-    color: #fff;
+    color: #fff !important;
+  
 }
 
 /* Begin header */
